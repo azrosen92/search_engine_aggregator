@@ -31,5 +31,6 @@ they did not parse correctly and the search_result_description and
 search_result_source field is empty for all results. So I've included the
 file google.html which is the html from a google search of the term "hurricane"
 copy/pasted into a document. When this document is parsed by the same parsers.py 
-class I get all of the data.
+class I get all of the data. You can run the code to see that this works by running
+`~$ python test_parsers.py`.
 
