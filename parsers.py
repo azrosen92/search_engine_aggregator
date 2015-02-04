@@ -15,20 +15,21 @@ class Parser():
 			search_result_description = None
 			search_result_source = None
 
-			print result.select(self.parser_dict['search_result_description_tag'])
+			# print result.select(self.parser_dict['search_result_description_tag'])
 
 			if result.select(self.parser_dict['search_result_title_tag']):
 				search_result_title = result.select(self.parser_dict['search_result_title_tag'])[0].decode_contents(formatter="html")
-				print "Search result title: ", search_result_title
+				# print "Search result title: ", search_result_title
 			if result.select(self.parser_dict['search_result_link_tag']):
-				search_result_link = result.select(self.parser_dict['search_result_link_tag'])[0].get("href")
-				print "Search result link: ", search_result_link
+				search_result_link = result.select(self.parser_dict['search_result_link_tag'])[0].decode_contents(formatter="html") #get("href")
+				# print "Search result link: ", search_result_link
 			if result.select(self.parser_dict['search_result_description_tag']):
 				search_result_description = result.select(self.parser_dict['search_result_description_tag'])[0].decode_contents(formatter="html")
-				print "Search result description: ", search_result_description
+				# print "Search result description: ", search_result_description
+
 			if result.select(self.parser_dict['search_result_source_tag']):
 				search_result_source = result.select(self.parser_dict['search_result_source_tag'])[0].decode_contents(formatter="html")
-				print "Search result source: ", search_result_source
+				# print "Search result source: ", search_result_source
 
 			print "----------------------------------------------"
 

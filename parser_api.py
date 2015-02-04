@@ -14,9 +14,9 @@ service_url_dict = {
 google_parser_dict = {
 	'search_result_tag' : 'li.g',
 	'search_result_title_tag' : 'h3.r > a',
-	'search_result_link_tag' : 'h3.r > a',
-	'search_result_description_tag' : 'div.rc > div.s > div > span.st',
-	'search_result_source_tag' : 'div.rc > div.s > div > div.f > div.crc > div.crl'
+	'search_result_link_tag' : 'div.s > div.kv > cite',
+	'search_result_description_tag' : 'div.s > span.st',
+	'search_result_source_tag' : 'div.s > div.kv > cite'
 }
 
 yahoo_parser_dict = {
@@ -30,7 +30,7 @@ yahoo_parser_dict = {
 bing_parser_dict = {
 	'search_result_tag' : 'li.b_algo',
 	'search_result_title_tag' : 'h2 > a',
-	'search_result_link_tag' : 'h2 > a',
+	'search_result_link_tag' : 'div.b_caption > div.b_attribution > cite',
 	'search_result_description_tag' : 'div.b_caption > p',
 	'search_result_source_tag' : 'h2 > a'
 }

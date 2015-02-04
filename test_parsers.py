@@ -30,7 +30,5 @@ google_parser = Parser(html, google_parser_dict)
 yahoo_parser = Parser(html, yahoo_parser_dict)
 bing_parser = Parser(html, bing_parser_dict)
 
-pp = PrettyPrinter(indent=4)
-
 print google_parser.retrieve_json_data()
 
